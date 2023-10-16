@@ -93,8 +93,9 @@
                         if (data['status'] == true){
                             $('#login_message').text("Welcome " + data['username'] +", Login Successfully.");
                             $('#login_message').show(0).delay(3000).hide(0);
+                            window.location.href = '/creator?username=' + data['username'];
                         } else{
-                            $(".error_message").text("Incorrect Email and Password.");
+                            $(".error_message").text("Incorrect Email or Password.");
                             $(".error_message").show(0).delay(3000).hide(0);
                         }
                     } 
